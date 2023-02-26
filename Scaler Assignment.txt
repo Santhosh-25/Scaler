@@ -1,0 +1,62 @@
+
+
+Locators:-
+
+Locators are the HTML attributes of a web element. Used to identify unique web elements of a page and Command testing frameworks. It is also known as Selectors.
+
+
+Types of Locators:-
+
+1. ID - ID strategy looks for an web element in the page having an id attribute corresponding to the specified pattern. Most recommended to locate a web element.
+
+Syntax :  <label id = "my_id"/>
+
+2. Name - Web elements often have a name attribute associated with them. This type only returns the first element with the matching class. If mulitple elements of the same name exist, the first matched element will be returned. No matching elements result in a NoSuchElementException error.
+
+Syntax :  name = name of the web element.
+
+3. LinkText - It is used to search for a hyperlink element and This type is to search for the exact link's text.
+
+Syntax :  link = " ".
+
+4. CSS Selector - Locating by CSS Selector using an HTML tag and a class name is similar to using a tag and ID, a dot(.) is used instead of a hash sign.
+
+Syntax :  css = tag.class[attribute=value]
+
+5.Partial link text - In some scenarios, we need to find links by a portion of the text in a link text element. In such situtation, we use partial link text to locate elements.
+
+Syntax :  findElement(By.patialLinkText("partiallinktext"));
+
+6. Xpath - XPath is designed to allow the navigation of XML documents, with the purpose of selecting individual elements, attributes, or some other part of an XML document for specific processing.
+
+Locating with respect to Elements and Attributes
+
+1. Locating Elements with known Attribute
+
+Syntax :  //*[@attributeName='value'] ---------> *defines all elements, if you doesn't know the elementname, we can use *
+
+2. Locating Elements with known Element and Attributes
+
+//ElementName[@attributeName='value']
+
+3. Locating Element with known visible text (exact match)
+used for locating elements containing exact text within an element.
+
+//elementName[text()='exact text'] 
+
+4. Locating Elements when part of the visible text is known (partial match)
+
+//elementName[contains(text(),'part of the text')]
+
+5. Locating Elements with multiple Attributes
+To locate an exact element, we can use multiple attributes for selection.
+//elementName[@attribute1='value1'][@attribute2='value2'][@attribute3='value3']....[@attributeN='valueN']......till it will return 1 values.
+
+6. Locating Elements when starting visible text is known
+
+//elementName[starts-with(text(),'starting text')]
+
+7. Locating Elements with Dynamic Attribute values
+
+//elementName[contains(@attributeName,'part of the value')]
+//elementName[starts-with(@attributeName,'fixed prefix of the value')]
